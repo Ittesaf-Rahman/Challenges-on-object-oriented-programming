@@ -1,0 +1,18 @@
+class A:
+    def __init__(self,a):
+        self.a = a
+    def __It__(self, other):
+        if (self.a < other.a):
+            return "Obj1 is less than Obj2"
+        else:
+            return "Obj2 is less than obj1"
+    def __eq__(self, other):
+        if(self.a == other.a):
+            return "Both objects are equal"
+        else:
+            return "Both objects are not equal"
+v1 = A(2)
+v2 = A(3)
+print("passed value :",v1.a, v2.a)
+print(v1.a<v2.a)
+v3 = A(4)
