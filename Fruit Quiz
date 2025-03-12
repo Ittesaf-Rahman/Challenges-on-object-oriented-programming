@@ -1,0 +1,22 @@
+import random
+class fruitQuiz:
+    def __init__(self):
+        self.fruit = {"apple" : "red",
+                      "banana" : "yello",
+                      "Mango" : "yello-orange",
+                      "lichi" : "red"}
+    def quiz(self):
+        while True:
+            fruit, color = random.choice(list(self.fruit.items()))
+            print("What is the color of {}".format(fruit))
+            userAnswer = input("Type here = ")
+            if userAnswer.lower() == color:
+                print("correct Answer")
+            else:
+                print("Wrong Answer")
+            option = int(input("enter 0, if you want to play again otherwise enter enter 1"))
+            if (option):
+                break
+print("Welcome to fruit quiz")
+p = fruitQuiz()
+p.quiz()
